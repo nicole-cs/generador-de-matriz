@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>matriz</title>
+</head>
+<body>
+    <h1>creacion de matrises</h1>
+    <div>
+       
+        Numero de filas<input type="number"  name="columas" id="columnas">
+        <br><br>
+      
+        Numero de columnas<input type="number"  name="filas" id="filas">
+        <br></br>   
+        <input type="button" value="Generador" id="btnGenerador">
+    </div>
+
+<script>
+    var matriz= [];
+    var inicio=0;
+    document.getElementById("btnGenerador")
+        .addEventListener("click", function () {
+            var fila= parseInt(document.getElementById)("filas").value;
+            var columna = document.getElementById("columnas").value;
+            for (let i = 0; i < columna; i++) {
+                matriz.push(new Array);
+                for (let j = 0; j < fila ;j++) {
+                    inicio++;
+                    matriz[i].push(inicio);
+                }
+            }
+        })
+    function imprimirFilas() {
+        for (let i = 0; i < matriz.length; i++) {
+            console.log(matriz[i]);
+        }
+    }
+    function imprimirColumnas() {
+        for (let i = 0; i < matriz.length; i++) {
+            for (let j = 0; j < matriz[0].length; j++) {
+                console.log(matriz[j][i]);
+            }
+        }
+    }
+    function imprimirTodo(){
+        console.log(matriz);
+    }
+</script>
+</body>
+</html>
